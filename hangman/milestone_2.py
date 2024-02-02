@@ -1,19 +1,19 @@
 #%%
 import random
 
-word_list=['apple', 'pear', 'nectarine', 'peach', 'pineapple']
-print(word_list)
+my_fav_fruit=['apple', 'pear', 'nectarine', 'peach', 'pineapple']
+print(my_fav_fruit)
+
+fruit=random.choice(my_fav_fruit)
+print(fruit)
 # %%
-word=random.choice(word_list)
-# %%
-print(word)
-# %%
-temp=input('Please choose a single letter')
-if len(temp)==1 and temp.isalpha():
+#The following code takes an input from the user and verifies if it is a single letter
+user_input=input('Please choose a single letter')
+if len(user_input)==1 and user_input.isalpha():
     print('Goog guess!')
-    guess=temp
+    user_letter=user_input
 else:
     print("Oops! That is not a valid input.")
-# %%
-guess
+
+
 # %%
