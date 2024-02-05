@@ -8,6 +8,7 @@ This is an implementation of the Hangman game, where the computer thinks of a wo
 
 
 ### Installation instructions
+Just run milestone_4.py with a prefferable python interreter. 
 ### Usage instructions
 ### File structure of the project
 % milestone_3.py contains functins check_guess which checks if the letter is in the word and and ask_user_input, which requires a user input and calls out the check_guess function.
