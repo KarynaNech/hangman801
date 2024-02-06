@@ -19,10 +19,12 @@ class Hangman:
         A number of lives the player has, 5 by default
     __word: str
         For internal use, the word chosen by computer
+    __word_as_list: list
+        For internal use, the word chosen by computer as a list of letters
     word_user_view:
         A string of '_' and letters corresponding to the letters guessed already
-    __unique_letters: int
-        For internal use, number of unique symbols in the word
+    _unique_letters: int
+        The number of unique symbols in the word
     num_of_lives: int
         Lifes remaining
     list_of_guesses: list
@@ -33,10 +35,10 @@ class Hangman:
         Refer to the class documentation.
         '''
         self.__word=random.choice(word_list)
-        self.word_as_list=list(self.__word)
+        self.__word_as_list=list(self.__word)
         num_of_letters=len(self.__word)
         self.word_user_view=['_']*num_of_letters
-        self.__unique_letters=len(set(self.__word))
+        self._unique_letters=len(set(self.__word))
         self.num_of_lives=num_lives
         self.word_list=word_list
         self.list_of_guesses=[]
@@ -54,12 +56,12 @@ class Hangman:
         if guess in self.__word:
             print(f'Good guess! {guess} is in the word.')
             #Change the user view of the word and show it to the user:
-            for letter in range(len(self.word_as_list)):
-                if self.word_as_list[letter]==guess:
+            for letter in range(len(self.__word_as_list)):
+                if self.__word_as_list[letter]==guess:
                     self.word_user_view[letter]=guess
             print(self.word_user_view)
             #There is one less unique letter to guess now
-            self.__unique_letters-=1
+            self._unique_letters-=1
         else:
             #The guess was incorrect, so we must substract one life
             self.num_of_lives-=1
@@ -103,7 +105,7 @@ def play_game(word_list):
             print('You\'ve lost!')
             break
         #Continue the game if there are lives remaining and letters to guess
-        elif game.__unique_letters>0:
+        elif game._unique_letters>0:
             game.play()
         #End the game if the user guessed all of the words 
         else:
