@@ -16,27 +16,27 @@ the interface for a user.
 
 **Hangman** class contains the following methods:
 
-**__init__(self, word_list, num_lives)**:
-    Parameters:<br />
-    ----------<br />
-    word_list: list<br />
-        List of words to be used in the game<br />
-    num_lives: int <br />
-        Number of lives the player has<br />
-    Attributes:<br />
-    ----------<br />
-    num_of_lives: int<br />
-        A number of lives the player has, 5 by default<br />
-    __word: str<br />
-        For internal use, the word chosen by computer<br />
-    __word_as_list: list<br />
-        For internal use, the word chosen by computer as a list of letters<br />
-    word_user_view:<br />
-        A string of '_' and letters corresponding to the letters guessed already<br />
-    _unique_letters: int<br />
-        The number of unique symbols in the word<br />
-    num_of_lives: int<br />
-        Lifes remaining<br />
+**__init__(self, word_list, num_lives)**: <br />
+&emsp;    Parameters:<br />
+&emsp;    ----------<br />
+&emsp;    word_list: list<br />
+&emsp;&emsp;       List of words to be used in the game<br />
+&emsp;    num_lives: int <br />
+&emsp;&emsp;        Number of lives the player has<br />
+&emsp;    Attributes:<br />
+&emsp;    ----------<br />
+&emsp;    num_of_lives: int<br />
+&emsp;&emsp;        A number of lives the player has, 5 by default<br />
+&emsp;    __word: str<br />
+&emsp;&emsp;        For internal use, the word chosen by computer<br />
+&emsp;    __word_as_list: list<br />
+&emsp;&emsp;        For internal use, the word chosen by computer as a list of letters<br />
+&emsp;    word_user_view:<br />
+&emsp;&emsp;        A string of '_' and letters corresponding to the letters guessed already<br />
+&emsp;    _unique_letters: int<br />
+&emsp;&emsp;        The number of unique symbols in the word<br />
+&emsp;    num_of_lives: int<br />
+&emsp;&emsp;        Lifes remaining<br />
     list_of_guesses: list<br />
         A list of letters previously attempted by the user. <br />
         
