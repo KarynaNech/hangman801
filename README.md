@@ -23,7 +23,6 @@ the interface for a user.
         List of words to be used in the game<br />
     num_lives: int <br />
         Number of lives the player has<br />
-
     Attributes:<br />
     ----------<br />
     num_of_lives: int<br />
