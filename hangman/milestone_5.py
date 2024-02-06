@@ -74,20 +74,28 @@ class Hangman:
 
 # %%
 def play_game(word_list):
+    '''
+    This function executes the Hangman game. It initiates the class Hangman and calls 
+    the play() method until the user has either lost or won the game, and prints the result.
+    '''
     num_of_lives=5
     game=Hangman(word_list, num_of_lives)
     while True:
+        #End the game if we ran out of lives
         if game.num_of_lives==0:
             print('You\'ve lost!')
             break
+        #Continue the game if there are lives remaining and letters to guess
         elif game.__unique_letters>0:
             game.play()
+        #End the game if the user guessed all of the words 
         else:
             print('Congratulations. You won the game!')
             break
 
 
 # %%
+#Some list of words (foods) to play the game
 word_list=[
     'apple', 'bacon', 'bread', 'broil', 'cakes', 'candy', 'chili', 'chips', 'cream', 'crepe',
     'curry', 'dough', 'fruit', 'grape', 'grill', 'herbs', 'honey', 'jelly', 'juice', 'kebab',
