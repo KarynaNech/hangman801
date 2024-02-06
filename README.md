@@ -16,15 +16,30 @@ the interface for a user.
 
 **Hangman** class contains the following methods:
 
-**__init__(self, word_list, num_lives)**: defines the following attributes:
-    *word_list (list)*: A list of words which can be used for the game
-    *num_of_lives (int)*: A number of lives the player has, 5 by default
-    *__word (str)*: For internal use, the word chosen by computer
-    *word_user_view (str)*: A string of '_' and letters corresponding to
-    the letters guessed already
-    *__unique_letters (int)*: For internal use, number of unique symbols in the word
-    *num_of_lives (int)*: Lifes remaining
-    *list_of_guesses (list)*: A list of letters previously attempted by the user
+**__init__(self, word_list, num_lives)**:
+    Parameters:<br />
+    ----------<br />
+    word_list: list<br />
+        List of words to be used in the game<br />
+    num_lives: int <br />
+        Number of lives the player has<br />
+
+    Attributes:<br />
+    ----------<br />
+    num_of_lives: int<br />
+        A number of lives the player has, 5 by default<br />
+    __word: str<br />
+        For internal use, the word chosen by computer<br />
+    __word_as_list: list<br />
+        For internal use, the word chosen by computer as a list of letters<br />
+    word_user_view:<br />
+        A string of '_' and letters corresponding to the letters guessed already<br />
+    _unique_letters: int<br />
+        The number of unique symbols in the word<br />
+    num_of_lives: int<br />
+        Lifes remaining<br />
+    list_of_guesses: list<br />
+        A list of letters previously attempted by the user. <br />
         
 
 **check_guess(self, guess)**: checks is the guess is in the word.
