@@ -6,16 +6,27 @@ class Hangman:
     This class represents the Hangman game. After initiating
     the class, use play() method to proceed with the game.
 
+    Parameters:
+    ----------
+    word_list: list
+        List of words to be used in the game
+    num_lives: int
+        Number of lives the player has
+
     Attributes:
-    word_list (list): A list of words which can be used for the game
-    num_of_lives (int): A number of lives the player has, 5 by default
-    __word (str): For internal use, the word chosen by computer
-    word_user_view (str): A string of '_' and letters corresponding to
-    the letters guessed already
-    __unique_letters (int): For internal use, number of unique symbols in the word
-    num_of_lives (int): Lifes remaining
-    list_of_guesses (list): A list of letters previously attempted by the user.
-    
+    ----------
+    num_of_lives: int
+        A number of lives the player has, 5 by default
+    __word: str
+        For internal use, the word chosen by computer
+    word_user_view:
+        A string of '_' and letters corresponding to the letters guessed already
+    __unique_letters: int
+        For internal use, number of unique symbols in the word
+    num_of_lives: int
+        Lifes remaining
+    list_of_guesses: list
+        A list of letters previously attempted by the user.
     '''
     def __init__(self,  word_list, num_lives=5):
         '''
@@ -31,11 +42,13 @@ class Hangman:
         self.list_of_guesses=[]
     def check_guess(self, guess):
         '''
-        This method checks if a letter in a variable guess is present
+        Checks if a letter in a variable guess is present
         in the word, and changes the relevant attributs respectibely.
         
         Args:
-        guess (str): the letter to be checked
+        -----
+        guess: str
+            the letter to be checked
         '''
         guess=guess.lower()
         if guess in self.__word:
@@ -55,9 +68,8 @@ class Hangman:
       
     def play(self):
         '''
-        This method imitates a turn of the game. It asks for user input
-        iteratively until it is a single letter and calls the 
-        check_guess() method in this case.
+        Imitates a turn of the game. Asks for user input iteratively until it 
+        is a single letter and calls the check_guess() method in this case.
         '''
         while True:
             guess=input('Please select a letter')
@@ -75,8 +87,13 @@ class Hangman:
 # %%
 def play_game(word_list):
     '''
-    This function executes the Hangman game. It initiates the class Hangman and calls 
-    the play() method until the user has either lost or won the game, and prints the result.
+    Executes the Hangman game. Initiates the class Hangman and calls the play() 
+    method until the user has either lost or won the game, and prints the result.
+
+    Parameters:
+    ----------
+    word_list: list
+        The list of the words on which the game is played
     '''
     num_of_lives=5
     game=Hangman(word_list, num_of_lives)
