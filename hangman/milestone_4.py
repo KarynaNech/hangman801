@@ -1,9 +1,4 @@
 #%%
-##TODO:
-#Change names to descriptive ones
-#Make attributes llike word, word_list and num_letters hidden from the user
-# Change the method names
-
 
 import random
 
